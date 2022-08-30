@@ -9,36 +9,37 @@ git remote add origin https://github.com/your_user/your_repo
 git push -u origin main
 
 
-
 2. Add an existing repository
 
-//Copies an existing repository to your computer
-git clone https://github.com/some_user/some_repo
-
-
-Additional Commands
-
 //Display the current status of your files. Do this often!
-git status
+    git status
+
+//Copies an existing repository to your computer
+    git clone https://github.com/some_user/some_repo
+
+
+//clone a specific branch from a repository. 
+    //Change main to your specific branch name.
+    git clone -b yourBranch https://github.com/some_user/some_repo
 
 //Switch to another branch
-git checkout some_branch 
+    git checkout some_branch 
 
 
 3. Updating exiting files in your repository
 //Add all files
-git add . 
+    git add . 
 
 //Add a specific file ie index.html 
-git add someFile.fileextension  
+    git add someFile.fileextension  
 
 //Commits to adding your changes to the repository
-git commit -m "new message"
+    git commit -m "new message"
 
 //Pushes changes up to your GitHub repository
-git push
+    git push
 
 /* Command Commands to run during the course */
-git add .
-git commit -m "your update message"
-git push
+    git add .
+    git commit -m "your update message"
+    git push
