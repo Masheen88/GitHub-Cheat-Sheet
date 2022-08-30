@@ -1,0 +1,28 @@
+/* Dark/Light Mode - Begin */
+/* Toggles background color based on dark or light mode classes */
+
+body.dark {
+  color: white;
+  background-color: black;
+}
+
+body.light {
+  color: black;
+  background-color: white;
+}
+
+/* Toggles dark/light mode button on dark or light mode classes */
+.darkButton.dark {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+}
+
+.darkButton.light {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+/* Dark/Light Mode - End */
+
+/* Project Code Below Here */

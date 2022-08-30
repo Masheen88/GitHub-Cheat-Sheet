@@ -1,0 +1,7 @@
+Folder Structure
+Adding files/folders
+Navigating to a folder
+Terminal into a directory
+Using GH in VSC
+Useful ShortCuts
+Extensions

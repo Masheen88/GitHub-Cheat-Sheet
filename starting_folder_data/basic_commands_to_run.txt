@@ -1,0 +1,87 @@
+//Useful tutorial if you want to create a json-server with multiple db files
+https://billyyyyy3320.com/en/2019/07/21/create-json-server-with-multiple-files/
+
+
+
+/* Basic Steps */
+
+//should be ran globally:
+//json-server is responsible for serving the data
+// -g installs global and is excluded from the package.json in project root directory
+
+/* *Only have to perform this one on your computer. */
+npm i -g json-server
+
+
+/* The following commands are perform for each project */
+
+//should be run inside the root project directory
+npm init -y
+
+// allows you to install multiple packages at once
+npm i concurrently jquery bootstrap
+
+
+//must be added into scripts of the package JSON
+//json-server can have a custom IP
+//live server can have a custom port
+//db.json is a local database.
+
+//replace 192.168.50.56 with your own ip address or remove to use localhost
+"start": "concurrently \"json-server --host 192.168.50.56 db.json\" \"live-server --port=8090 \""
+
+
+
+/* Basic db.json format with multiple routes */
+ex. 
+//syntax example
+//ip:port/route1
+//http://yourcustomip:yourcustomPort/yourCustomRoute
+
+{
+    "route1": [
+        {"objectName": "objectValue"}
+    ],
+    "route2": [
+        {"objectName": "objectValue"}
+    ]
+}
+
+//sample boiler plate JSON object
+//127.0.0.1:3000/posts
+//localhost:3000/imageData
+//192.168.50.56/foodData
+
+
+{
+  "posts": [
+    { "id": 1, "name": "john doe", "author": "johnny" }
+  ],
+  "imageData": [
+    { "id": 1, "name": "image1", "imageUrlData": "./images/image1.jpg" },
+    { "id": 2, "name": "image2", "imageUrlData": "./images/image2.jpg" },
+    { "id": 3, "name": "image3", "imageUrlData": "./images/image3.jpg" }
+  ],
+  "foodData": { "foodName": "Apple Pie", foodIngredients: [{"ingredient1": "Apples", "ingredient2": "Crust", "ingredient3": "Brown Sugar" }] "foodPrice": "8.00", "foodDescription": "Apple pie is a dish of apple with a crust. It is usually served at room temperature." },
+}
+
+
+
+
+
+/* Options Commands and Tips */
+
+//When initial data is ready you can cd into root directory of db.json and run:
+json-server --watch db.json
+
+//Allows you to add a unique ip to pull server data from.
+json-server --host 192.168.50.56 db.json
+
+//Allows you to symbolically link node module folders to the project root directory.
+  //Windows Command Prompt:
+  //Replace C:\Promineo\node_modules with the actual path to your real node modules folder.
+mklink /d node_modules C:\Promineo\node_modules
+
+  //Mac Terminal:
+  //Replace ../cache/node_modules with the actual path to your real node_modules folder.
+ln -s ../cache/node_modules node_modules
