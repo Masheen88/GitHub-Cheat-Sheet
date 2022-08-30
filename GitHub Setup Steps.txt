@@ -38,7 +38,7 @@ git commit -m "new message"
 //Pushes changes up to your GitHub repository
 git push
 
-
+/* Command Commands to run during the course */
 git add .
-git commit -m "update"
+git commit -m "your update message"
 git push
