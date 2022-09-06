@@ -1,0 +1,16 @@
+{
+  "name": "starting_folder_data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"json-server --host localhost db.json\" \"live-server --port=8090 \""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.3.0",
+    "jquery": "^3.6.1"
+  }
+}
