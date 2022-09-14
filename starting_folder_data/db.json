@@ -3,17 +3,17 @@
     {
       "id": 1,
       "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Bob Ross",
+      "comment": [
+        {
+          "id": 1,
+          "body": "happy little trees",
+          "date": "1994-05-17T20:09:31.000Z"
+        }
+      ]
     }
   ],
   "profile": {
-    "name": "typicode"
+    "name": "some painter dude"
   }
 }

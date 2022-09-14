@@ -18,7 +18,7 @@ toggleDarkMode.addEventListener("click", function () {
   let darkModeButton = document.getElementById("toggleDarkMode");
   // console.log(darkModeButton);
 
-  // toggle multipe classes on body
+  // toggle multiple classes on body
   let toggleMultipleClasses = function (element, button) {
     // if body is dark, remove dark and moon classes and add light and sun classes
     if (pageBody.classList.contains("dark")) {
@@ -57,3 +57,43 @@ TODO: So many things to do here!
 Hmm just a generic comment?!
 
 */
+
+let baseProject = document.getElementById("baseProject");
+
+const URL = "http://localhost:3000/posts";
+console.log(URL);
+
+//jquery get request
+
+let myPosts = $.get(URL, function (data, status) {
+  console.log(data);
+  console.log(status);
+});
+
+//append to the baseProject div
+myPosts.done(function (data) {
+  console.log("Data done:", data);
+  for (let i = 0; i < data.length; i++) {
+    let post = data[i];
+    console.log("post:", post);
+    let postID = post.id;
+    let postTitle = post.title;
+    let postUser = post.name;
+    let postComment = post.comment;
+    console.log("postComment:", postComment[0].id);
+
+    baseProject.innerHTML = `
+      <div class="card" style="width: 18rem;">
+        <p class="cardComponent">ID: ${postID}</p>
+        <h1 class="cardComponent">Title: ${postTitle}</h1>
+        <p class="cardComponent">Name: ${postUser}</p>
+        // map through the comments array
+        ${postComment.map((comment) => {
+          return `
+          <p class="cardComponent">Comment: ${comment.body}</p>
+          `;
+        })}
+      </div>
+    `;
+  }
+});

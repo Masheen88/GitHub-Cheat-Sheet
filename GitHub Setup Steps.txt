@@ -25,6 +25,8 @@ git push -u origin main
 //Switch to another branch
     git checkout some_branch 
 
+//Create a new branch
+    git checkout -b new_branch
 
 3. Updating exiting files in your repository
 //Add all files

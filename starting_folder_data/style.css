@@ -26,3 +26,11 @@ body.light {
 /* Dark/Light Mode - End */
 
 /* Project Code Below Here */
+.card {
+  text-align: center;
+  border: 1px solid red;
+}
+
+.cardComponent {
+  border: 1px solid blue;
+}
