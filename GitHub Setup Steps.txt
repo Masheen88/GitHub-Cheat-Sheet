@@ -13,10 +13,25 @@ git push -u origin main
     git commit -m "your update message"
     git push
 
-2. Add an existing repository
 
 //Display the current status of your files. Do this often!
     git status
+
+
+3. Updating exiting files in your repository
+//Add all files
+    git add . 
+
+//Commits to adding your changes to the repository
+    git commit -m "new message"
+
+//Pushes changes up to your GitHub repository
+    git push -u origin main
+
+
+
+2. Add an existing repository
+
 
 //Copies an existing repository to your computer
     git clone https://github.com/some_user/some_repo
@@ -31,18 +46,3 @@ git push -u origin main
 
 //Create a new branch
     git checkout -b new_branch
-
-3. Updating exiting files in your repository
-//Add all files
-    git add . 
-
-//Add a specific file ie index.html 
-    git add someFile.fileextension  
-
-//Commits to adding your changes to the repository
-    git commit -m "new message"
-
-//Pushes changes up to your GitHub repository
-    git push
-
-
