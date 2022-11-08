@@ -8,6 +8,10 @@ git branch -M main
 git remote add origin https://github.com/your_user/your_repo
 git push -u origin main
 
+/* Common Commands to run during the course */
+    git add .
+    git commit -m "your update message"
+    git push
 
 2. Add an existing repository
 
@@ -41,7 +45,4 @@ git push -u origin main
 //Pushes changes up to your GitHub repository
     git push
 
-/* Common Commands to run during the course */
-    git add .
-    git commit -m "your update message"
-    git push
+
