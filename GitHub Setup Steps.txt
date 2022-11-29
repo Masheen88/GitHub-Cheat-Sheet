@@ -41,6 +41,9 @@ git push -u origin main
 //Pushes changes up to your GitHub repository
     git push
 
+//Pulls changes from your GitHub repository
+    git pull
+
 /* Common Commands to run during the course */
     git add .
     git commit -m "your update message"

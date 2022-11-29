@@ -67,8 +67,6 @@ ex.
 
 
 
-
-
 /* Options Commands and Tips */
 
 //When initial data is ready you can cd into root directory of db.json and run:
