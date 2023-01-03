@@ -9,6 +9,11 @@ git remote add origin https://github.com/your_user/your_repo
 git push -u origin main
 
 
+/* Common Commands to run during the course, these three commands allow your new files/folders/changes to be pushed, be sure to change the commit message! */
+    git add .
+    git commit -m "your update message"
+    git push
+
 2. Add an existing repository
 
 //Display the current status of your files. Do this often!
@@ -44,7 +49,4 @@ git push -u origin main
 //Pulls changes from your GitHub repository
     git pull
 
-/* Common Commands to run during the course */
-    git add .
-    git commit -m "your update message"
-    git push
+
