@@ -49,4 +49,6 @@ git push -u origin main
 //Pulls changes from your GitHub repository
     git pull
 
+//Change a file name and keep the History
+    git mv old_file_name.js new_file_name.html
 
