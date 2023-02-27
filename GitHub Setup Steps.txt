@@ -1,54 +1,70 @@
 1. Adding a new repository
-
-echo "# This is my first commit" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/your_user/your_repo
-git push -u origin main
-
-
-/* Common Commands to run during the course, these three commands allow your new files/folders/changes to be pushed, be sure to change the commit message! */
-    git add .
-    git commit -m "your update message"
-    git push
-
-2. Add an existing repository
-
-//Display the current status of your files. Do this often!
-    git status
-
-//Copies an existing repository to your computer
-    git clone https://github.com/some_user/some_repo
+    //Pushes a new repository to GitHub
+        echo "# This is my first commit" >> README.md
+        git init
+        git add README.md
+        git commit -m "first commit"
+        git branch -M main
+        git remote add origin GIT_URL_HERE
+        git push -u origin main
 
 
-//clone a specific branch from a repository. 
-    //Change main to your specific branch name.
-    git clone -b yourBranch https://github.com/some_user/some_repo
+2. These commands can be ran as often as you code!
+    //Add commits and pushes your changes
+        git add .
+        git commit -m "I pushed some cool files!"
+        git push
 
-//Switch to another branch
-    git checkout some_branch 
 
-//Create a new branch
-    git checkout -b new_branch
+3. Errors and Fixes
+    //Identifies you as the user
+        git config --global user.email yourEmail456@email.com
+        git config --global user.name yourUsername789
 
-3. Updating exiting files in your repository
-//Add all files
-    git add . 
+    //Amends your last commit with the new author
+        git commit --amend --reset-author
 
-//Add a specific file ie index.html 
-    git add someFile.fileextension  
+ 
+4. Useful Commands and tips!
 
-//Commits to adding your changes to the repository
-    git commit -m "new message"
+    //Display the current status of your files.
+        git status
 
-//Pushes changes up to your GitHub repository
-    git push
+    //Copies an existing repository to your computer
+        git clone https://github.com/some_user/some_repo
 
-//Pulls changes from your GitHub repository
-    git pull
 
-//Change a file name and keep the History
-    git mv old_file_name.js new_file_name.html
+    //clone a specific branch from a repository. 
+        git clone -b yourBranch https://github.com/some_user/some_repo
+
+    //Switch to another branch
+        git checkout some_branch 
+
+    //Create a new branch
+        git checkout -b new_branch
+
+    //Add all files
+        git add . 
+
+    //Add a specific file ie index.html 
+        git add someFile.fileextension  
+
+    //Commits to adding your changes to the repository
+        git commit -m "new message"
+
+    //Pushes changes up to your GitHub repository
+        git push
+
+    //Pulls changes from your GitHub repository
+        git pull
+
+    //Shows the history of your commits
+        git log
+
+    //Change a file name and keep the History
+        git mv old_file_name.js new_file_name.html
+
+    //Delete a file and keep the History
+        git rm file_name.js
+        
 
