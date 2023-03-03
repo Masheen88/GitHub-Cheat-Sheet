@@ -24,6 +24,9 @@
     //Amends your last commit with the new author
         git commit --amend --reset-author
 
+    //Incorrect remote origin URL? Allows git to push to the correct repository
+        git remote set-url origin GIT_URL_HERE
+
  
 4. Useful Commands and tips!
 
