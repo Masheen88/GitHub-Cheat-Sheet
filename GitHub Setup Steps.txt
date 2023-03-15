@@ -11,8 +11,16 @@
 
 2. These commands can be ran as often as you code!
     //Add commits and pushes your changes
+        //if using terminal,command prompt, zsh, or bash
         git add .
+
+        //if using terminal or command prompt
         git commit -m "I pushed some cool files!"
+
+        //if using zsh or bash
+        git commit -m 'I pushed some cool files!'
+
+        //if using terminal,command prompt, zsh, or bash
         git push
 
 
@@ -40,6 +48,9 @@
     //clone a specific branch from a repository. 
         git clone -b yourBranch https://github.com/some_user/some_repo
 
+    //Lists all branches local and remote
+        git branch -a
+
     //Switch to another branch
         git checkout some_branch 
 
@@ -54,6 +65,9 @@
 
     //Commits to adding your changes to the repository
         git commit -m "new message"
+
+    // Updated your last commit with an ammended message
+        git commit --amend -m "new message"
 
     //Pushes changes up to your GitHub repository
         git push
