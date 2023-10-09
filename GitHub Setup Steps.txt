@@ -84,4 +84,7 @@
     //Delete a file and keep the History
         git rm file_name.js
         
+    //Allows git to push to the correct repository
+    //Useful if you have a different GitHub account
+        git remote set-url origin git://new.url.here 
 
