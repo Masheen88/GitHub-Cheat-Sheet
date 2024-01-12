@@ -2,7 +2,7 @@
     //Pushes a new repository to GitHub
         echo "# This is my first commit" >> README.md
         git init
-        git add README.md
+        git add .
         git commit -m "first commit"
         git branch -M main
         git remote add origin GIT_URL_HERE
