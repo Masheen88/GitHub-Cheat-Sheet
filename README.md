@@ -21,13 +21,13 @@
 
 
 ###2. Run these three commands frequently!
-	#if using terminal,command prompt, zsh, or bash
+	#adds all current project changes
         git add .
 
-	#if using zsh or bash
-        git commit -m 'I pushed some cool files!'
+	#includes a commit message
+        git commit -m 'I made some code changes!'
 
-	#if using terminal,command prompt, zsh, or bash
+	#pushes your code from your project to your repository
         git push
 
 
