@@ -21,16 +21,16 @@
 
 
 ### 2. Run these three commands frequently!
-```
+
 #adds all current project changes
-        git add .
+    git add .
 
 #includes a commit message
-        git commit -m 'I made some code changes!'
+    git commit -m 'I made some code changes!'
 
-#pushes your code from your project to your 	   repository
-        git push
-```
+#pushes your code from your project to your repository
+    git push
+
 
 
 
