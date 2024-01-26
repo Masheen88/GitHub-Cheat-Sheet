@@ -6,17 +6,21 @@
 ```
 #Adds a readme file
     echo "# Your first commit message!" >> README.md
+
 #initializes the git library
     git init
+
 #Adds all project changes
     git add .
+
 #adds a commit message
     git commit -m "added initial project and readme file"
+
 #creates a branch called main
     git branch -M main
+
 #connects your diretory to a github repoistory
-    git remote add origin Git_url_here
-$${\color{red}Test \space \color{lightblue}to \space \color{orange}Color}$$
+    git remote add origin GIT_REPO_URL_HERE
 
 #pushes code from your computer to the main branch
     git push -u origin main
@@ -46,7 +50,7 @@ $${\color{red}Test \space \color{lightblue}to \space \color{orange}Color}$$
     git commit --amend --reset-author
 
 #Incorrect remote origin URL? Allows git to push to the correct repository
-    git remote set-url origin GIT_URL_HERE
+    git remote set-url origin GIT_REPO_URL_HERE
 ```
 
 ### 4. Useful Commands and tips!
