@@ -15,7 +15,7 @@
 #creates a branch called main
     git branch -M main
 #connects your diretory to a github repoistory
-    git remote add origin Git_url_here
+    git remote add origin Git_url_here $${\color{red}TEST}$$
 #pushes code from your computer to the main branch
     git push -u origin main
 ```
