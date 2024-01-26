@@ -1,5 +1,0 @@
-//Creates the initial react app directory.
-npx create-react-app your-react-app-name-here
-
-//Starts the npm development server.
-npm start
