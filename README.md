@@ -3,7 +3,7 @@
 ### Please Carefully read each instruction before proceeding.
 
 ### 1. Adding a new repository
-
+```
     #Adds a readme file
 		echo "# Your first commit message!" >> README.md
 	#initializes the git library
@@ -18,10 +18,10 @@
         git remote add origin Git_url_here
 	#pushes code from your computer to the main branch
         git push -u origin main
-
+```
 
 ### 2. Run these three commands frequently!
-
+```
 #adds all current project changes
     git add .
 
@@ -30,11 +30,12 @@
 
 #pushes your code from your project to your repository
     git push
-
+```
 
 
 
 ### 3. Errors and Fixes
+```
 	#Identifies you as the user
 		git config --global user.email yourEmail456@email.com
         git config --global user.name yourUsername789
@@ -44,10 +45,10 @@
 
 	#Incorrect remote origin URL? Allows git to push to the correct repository
         git remote set-url origin GIT_URL_HERE
-
+```
 
 ### 4. Useful Commands and tips!
-
+```
 	#Display the current status of your files
         git status
 
@@ -93,3 +94,4 @@
 	#Allows git to push to the correct repository
 	#Useful if you have a different GitHub account
 		git remote set-url origin git://new_url_here 
+```
