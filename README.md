@@ -3,6 +3,7 @@
 ### Please Carefully read each instruction before proceeding.
 
 ### 1. Adding a new repository
+
 ```
 #Adds a readme file
     echo "# Your first commit message!" >> README.md
@@ -27,6 +28,7 @@
 ```
 
 ### 2. Run these three commands frequently!
+
 ```
 #adds all current project changes
     git add .
@@ -38,9 +40,8 @@
     git push
 ```
 
-
-
 ### 3. Errors and Fixes
+
 ```
 #Identifies you as the user
     git config --global user.email yourEmail456@email.com
@@ -54,6 +55,7 @@
 ```
 
 ### 4. Useful Commands and tips!
+
 ```
 #Display the current status of your files
     git status
@@ -95,7 +97,10 @@
     git mv old_file_name.js new_file_name.html
 
 #Delete a file and keep the History
-    git rm file_name.js
+    git rm 'file_name'
+
+#Remove a file from GitHub but not locally
+    git rm --cached 'file_name'
 
 #Allows git to push to the correct repository
 #Useful if you have a different GitHub account
