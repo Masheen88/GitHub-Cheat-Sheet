@@ -113,13 +113,13 @@
     git stash push -m "Description of changes"
 
 #2. Switch to the target branch - be sure it was created beforehand
-git checkout branch-name
+    git checkout branch-name
 
 #3. Apply your stashed changes to the new branch
-git stash pop
+    git stash pop
 
 #4. Add, Commit, and Push your new changes
-git add .
-git commit -m "Changes added to correct branch!"
-git push
+    git add .
+    git commit -m "Changes added to correct branch!"
+    git push
 ```
