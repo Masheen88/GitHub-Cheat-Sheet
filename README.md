@@ -107,7 +107,7 @@
     git remote set-url origin git://new_url_here
 ```
 
-### Steps to stash and move from one branch to another
+### 5. Steps to stash and move from one branch to another
 ```
 #1. Stash your changes on the current branch
     git stash push -m "Description of changes"
