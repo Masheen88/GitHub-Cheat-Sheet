@@ -106,3 +106,20 @@
 #Useful if you have a different GitHub account
     git remote set-url origin git://new_url_here
 ```
+
+### Steps to stash and move from one branch to another
+```
+#1. Stash your changes on the current branch
+    git stash push -m "Description of changes"
+
+#2. Switch to the target branch - be sure it was created beforehand
+git checkout branch-name
+
+#3. Apply your stashed changes to the new branch
+git stash pop
+
+#4. Add, Commit, and Push your new changes
+git add .
+git commit -m "Changes added to correct branch!"
+git push
+```
