@@ -106,8 +106,16 @@
 #Useful if you have a different GitHub account
     git remote set-url origin git://new_url_here
 ```
+### 5. Sync delete remote vs local branches
+```
+#Checks branches delete remotely and also removes those same ones locally
 
-### 5. Steps to stash and move from one branch to another
+#Windows Powershell:
+    git fetch --prune; git branch -vv | Select-String ': gone]' | ForEach-Object { $_.ToString().Trim().Split()[0] } | ForEach-Object { git branch -d $_ }
+
+```
+
+### 6. Steps to stash and move from one branch to another
 ```
 #1. Stash your changes on the current branch
     git stash push -m "Description of changes"
