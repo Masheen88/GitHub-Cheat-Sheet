@@ -113,6 +113,13 @@
 #Windows Powershell:
     git fetch --prune; git branch -vv | Select-String ': gone]' | ForEach-Object { $_.ToString().Trim().Split()[0] } | ForEach-Object { git branch -d $_ }
 
+#Deletes all branches LOCALLY except for the one specified ie. development
+git branch | Select-String -Pattern "^  (?!development\b).*$" | ForEach-Object { git branch -d $_.Line.Trim() }
+
+#Lists out all branches except the one specified, useful for verification
+git branch | Select-String -Pattern "^  (?!development\b).*$" | ForEach-Object { echo $_.Line.Trim() }
+
+
 ```
 
 ### 6. Steps to stash and move from one branch to another
