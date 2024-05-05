@@ -112,17 +112,33 @@
 
 #Windows Powershell:
     git fetch --prune; git branch -vv | Select-String ': gone]' | ForEach-Object { $_.ToString().Trim().Split()[0] } | ForEach-Object { git branch -d $_ }
+```
+### 6. List and remove branches except the branch specified ie. development
+```
+# List and store branches eligible for deletion
+$branchesToDelete = git branch | Select-String -Pattern "^  (?!development\b).*$" | ForEach-Object { $_.Line.Trim() }
 
-#Deletes all branches LOCALLY except for the one specified ie. development
-    git branch | Select-String -Pattern "^  (?!development\b).*$" | ForEach-Object { git branch -d $_.Line.Trim() }
+# Display branches
+Write-Host "The following branches are eligible for deletion:"
+$branchesToDelete | ForEach-Object { Write-Host $_ }
 
-#Lists out all branches except the one specified, useful for verification
-    git branch | Select-String -Pattern "^  (?!development\b).*$" | ForEach-Object { echo $_.Line.Trim() }
-
+# Prompt for confirmation for each branch
+foreach ($branch in $branchesToDelete) {
+    $confirmation = Read-Host "Do you want to delete branch '$branch'? (Y/N)"
+    if ($confirmation -eq 'Y') {
+        git branch -d $branch
+        Write-Host "Deleted branch $branch"
+    } elseif ($confirmation -eq 'N') {
+        Write-Host "Exiting script. No branches deleted."
+        break
+    } else {
+        Write-Host "Invalid input. Please enter 'Y' or 'N'."
+    }
+}
 
 ```
 
-### 6. Steps to stash and move from one branch to another
+### 7. Steps to stash and move from one branch to another
 ```
 #1. Stash your changes on the current branch
     git stash push -m "Description of changes"
