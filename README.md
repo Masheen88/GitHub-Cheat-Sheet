@@ -113,8 +113,11 @@
 #Windows Powershell:
     git fetch --prune; git branch -vv | Select-String ': gone]' | ForEach-Object { $_.ToString().Trim().Split()[0] } | ForEach-Object { git branch -d $_ }
 ```
-### 6. List and remove branches except the branch specified ie. development
+### 6. List and delete branches but the one specified ie. development
 ```
+# Switch to the development branch
+git checkout development
+
 # List and store branches eligible for deletion
 $branchesToDelete = git branch | Select-String -Pattern "^  (?!development\b).*$" | ForEach-Object { $_.Line.Trim() }
 
@@ -122,19 +125,19 @@ $branchesToDelete = git branch | Select-String -Pattern "^  (?!development\b).*$
 Write-Host "The following branches are eligible for deletion:"
 $branchesToDelete | ForEach-Object { Write-Host $_ }
 
-# Prompt for confirmation for each branch
-foreach ($branch in $branchesToDelete) {
-    $confirmation = Read-Host "Do you want to delete branch '$branch'? (Y/N)"
-    if ($confirmation -eq 'Y') {
+# Ask for confirmation to delete all listed branches
+$confirmation = Read-Host "Do you want to delete all listed branches? (Y/N)"
+if ($confirmation -eq 'Y') {
+    foreach ($branch in $branchesToDelete) {
         git branch -d $branch
         Write-Host "Deleted branch $branch"
-    } elseif ($confirmation -eq 'N') {
-        Write-Host "Exiting script. No branches deleted."
-        break
-    } else {
-        Write-Host "Invalid input. Please enter 'Y' or 'N'."
     }
+} elseif ($confirmation -eq 'N') {
+    Write-Host "No branches were deleted."
+} else {
+    Write-Host "Invalid input. Exiting script."
 }
+
 
 ```
 
